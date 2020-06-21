@@ -9,7 +9,7 @@ package proyectotarjetas;
  *
  * @author Lucas
  */
-public class Credito extends tarjeta {
+public class Credito extends Tarjeta {
 
     float limite;
 
@@ -20,19 +20,19 @@ public class Credito extends tarjeta {
 
     @Override
     public boolean depositar(float importe) {
-        boolean depositar =false;
+        boolean depositar = false;
         float saldoNuevo = getSaldo() - importe;
         setSaldo(saldoNuevo);
-        depositar=true;
+        depositar = true;
         return depositar;
     }
 
     @Override
     public boolean extraer(float compra) {
         boolean extraer = false;
-        if (compra + getSaldo()<= limite) { 
-            float nuevoSaldo = getSaldo()+ compra;
-            setSaldo(nuevoSaldo); 
+        if (compra + getSaldo() <= limite) {
+            float nuevoSaldo = getSaldo() + compra;
+            setSaldo(nuevoSaldo);
             extraer = true;
         }
         return extraer;

@@ -9,30 +9,30 @@ package proyectotarjetas;
  *
  * @author Lucas
  */
-public class Debito extends tarjeta {
+public class Debito extends Tarjeta {
 
     public Debito(int numeroTarjeta, float saldo, String titular) {
         super(numeroTarjeta, saldo, titular);
     }
-    
-     @Override
+
+    @Override
     public boolean depositar(float importe) {
-       boolean depositar=false;
-        float nuevoSaldo=getSaldo()+importe;
-         setSaldo(nuevoSaldo);
+        boolean depositar = false;
+        float nuevoSaldo = getSaldo() + importe;
+        setSaldo(nuevoSaldo);
+        depositar = true;
         return depositar;
     }
-    
-     @Override
-    public boolean extraer(float importe){
+
+    @Override
+    public boolean extraer(float importe) {
         boolean extraer = false;
-         if (getSaldo()>= importe) {
-             float nuevoSaldo = getSaldo()-importe;
-             setSaldo(nuevoSaldo);
-             extraer=true;
-             }         
+        if (getSaldo() >= importe) {
+            float nuevoSaldo = getSaldo() - importe;
+            setSaldo(nuevoSaldo);
+            extraer = true;
+        }
         return extraer;
     }
-    
-    
+
 }

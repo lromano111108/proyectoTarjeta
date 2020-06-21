@@ -13,13 +13,13 @@ package proyectotarjetas;
  *
  * @author Lucas
  */
-public abstract class tarjeta {
+public abstract class Tarjeta {
     
     private int numeroTarjeta;
     private float saldo;
     private String titular;
 
-    public tarjeta(int numeroTarjeta, float saldo, String titular) {
+    public Tarjeta(int numeroTarjeta, float saldo, String titular) {
         this.numeroTarjeta = numeroTarjeta;
         this.saldo = saldo;
         this.titular = titular;

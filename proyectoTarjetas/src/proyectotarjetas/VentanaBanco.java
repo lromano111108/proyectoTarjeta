@@ -26,7 +26,8 @@ public class VentanaBanco extends javax.swing.JFrame {
         cargarCombo(cboBoxTipoTarjeta);
         cargarCombo(cboBoxTipoTarjetaOperacion);
         cboBoxTipoTarjeta.setSelectedIndex(-1);
-        cboBoxTipoTarjeta.setSelectedIndex(-1);
+        cboBoxTipoTarjetaOperacion.setSelectedIndex(-1);
+        txtNumero.requestFocus();
 
     }
 
@@ -136,35 +137,34 @@ public class VentanaBanco extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblLimite, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtLimite, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblTipoTarjeta, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTipoTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cboBoxTipoTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTitular, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNumero, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(txtSaldo)
-                            .addComponent(txtTitular))))
+                            .addComponent(lblLimite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblNumero, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                            .addComponent(lblTitular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblSaldo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(58, 58, 58)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtNumero, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                                .addComponent(txtSaldo)
+                                .addComponent(txtTitular))
+                            .addComponent(txtLimite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
+                        .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblSaldototalTarjetasDebito, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPromedioSaldosTarjetasCredito, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(20, 20, 20))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblSaldototalTarjetasDebito, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                                    .addComponent(lblPromedioSaldosTarjetasCredito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(41, 41, 41))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -212,7 +212,7 @@ public class VentanaBanco extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNumero)
-                    .addComponent(lblPromedioSaldosTarjetasCredito))
+                    .addComponent(lblPromedioSaldosTarjetasCredito, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -243,7 +243,7 @@ public class VentanaBanco extends javax.swing.JFrame {
                     .addComponent(lblImporte))
                 .addGap(37, 37, 37)
                 .addComponent(btnOperar)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
@@ -273,7 +273,7 @@ public class VentanaBanco extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        float SaldoTotal=banco.saldoTotalTarjetaDebito();
         lblSaldototalTarjetasDebito.setText("El Saldo Total de Tarjetas de Debito es de: $" + banco.saldoTotalTarjetaDebito());
-        lblPromedioSaldosTarjetasCredito.setText("El Promedio Total de Saldos de Tarjetas de Credito es de: $" + banco.promedioTotalTarjetaCredito());
+        lblPromedioSaldosTarjetasCredito.setText("El Promedio de Saldo de Tarjetas de credito es de: $" + banco.promedioTotalTarjetaCredito());
     }//GEN-LAST:event_btnMostrarReportesActionPerformed
 
     private void btnOperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOperarActionPerformed
@@ -283,23 +283,18 @@ public class VentanaBanco extends javax.swing.JFrame {
         float importe = Float.parseFloat(txtImporteOperar.getText());
 
         if (rbtExtraer.isSelected()) {
+            if (banco.extraer(nroTarjeta, tipoTarjeta, importe)) {
+                JOptionPane.showMessageDialog(this, "Operacion Exitosa");
+            } else {
+                JOptionPane.showMessageDialog(this, "La Operacion Fracasó");
+            }
+        } else if (rbtDepositar.isSelected()) {
+            if (banco.depositar(nroTarjeta, tipoTarjeta, importe)) {
+                JOptionPane.showMessageDialog(this, "Operacion Exitosa");
+            } else {
+                JOptionPane.showMessageDialog(this, "La Operacion Fracasó");
+            }
 
-            banco.extraer(nroTarjeta, tipoTarjeta, importe);
-            if (banco.extraer(nroTarjeta, tipoTarjeta, importe) == true) {
-                JOptionPane.showMessageDialog(this, "Operacion Exitosa");
-            } else {
-                JOptionPane.showMessageDialog(this, "La Operacion Fracasó");
-            }
-        }
-        
-        else if (rbtDepositar.isSelected()) {
-            banco.depositar(nroTarjeta, tipoTarjeta, importe);
-            if (banco.depositar(nroTarjeta, tipoTarjeta, importe) == true) {
-                JOptionPane.showMessageDialog(this, "Operacion Exitosa");
-            } else {
-                JOptionPane.showMessageDialog(this, "La Operacion Fracasó");
-            }
-            
         }
     }//GEN-LAST:event_btnOperarActionPerformed
 
